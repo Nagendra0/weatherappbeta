@@ -5,8 +5,22 @@ import Icon from './icon'
 import Condition from './condition'
 
 const WeatherCard = (props) => {
+
+    let highcolor,lowcolor;
+    let bg;
+    if(props.temp > 12){
+        highcolor = (1-(props.temp-12)/28)*255;
+        lowcolor = highcolor - 150;
+        bg = ` linear-gradient(to top,rgb(255,${highcolor},0),rgb(255,${lowcolor},0))`
+    }
+    else{
+        highcolor = (1-(props.temp+20)/32)*255;
+        lowcolor = highcolor - 150;
+        bg = ` linear-gradient(to top,rgb(0,${highcolor},255),rgb(0,${lowcolor},255))`
+    }
+    
     const Card = styled.div`
-        background: linear-gradient(to bottom,red,pink);
+        background:${bg};
         width: 200px;
         height: 240px;
         display: flex;
@@ -15,12 +29,12 @@ const WeatherCard = (props) => {
         margin: 0 auto;
         align-items: center;
         border-radius: 15px;
-    `
+    `;
     return (  
         <Card>
             <Location/>
             <Icon/>
-            <Condition/>
+            <Condition temp={props.temp}/>
         </Card>
     );
 }

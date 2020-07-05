@@ -9,10 +9,10 @@ const Condition = (props) => {
     const State = styled.h3`
         font-family: 'Hammersmith One',sans-serif;
         font-size: 1.2rem;
-    `
+    `;
     return (
         <>
-        <Temp className='temp'>32°C</Temp>
+        <Temp className='temp'>{props.temp}°C</Temp>
         <State className='condition'>Sunny</State>
         </>
      );
