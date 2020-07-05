@@ -5,11 +5,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <WeatherCard temp={-12}/>
-      <WeatherCard temp={40}/>
-      <WeatherCard temp={32}/>
-      <WeatherCard temp={20}/>
-      <WeatherCard temp={14}/>
+      <WeatherCard temp={-12} condition='Blizzard' city='New Delhi' country='IN'/>
+      <WeatherCard temp={40} condition='Clear' city='Detroite' country='US'/>
+      <WeatherCard temp={32} condition='Mostly Cloudy' city='New York' country='US'/>
+      <WeatherCard temp={20} condition='Clear Night' city='New Delhi' country='IN'/>
+      <WeatherCard temp={14} condition='Drizzle' city='New Delhi' country='IN'/>
     </div>
   );
 }
