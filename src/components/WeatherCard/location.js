@@ -4,9 +4,11 @@ import styled from '@emotion/styled'
 const Location = ({city,country}) => {
 
     const Container = styled.div`
+        
         text-align: center;
     `;
     const Country = styled.h1`
+    
         font-family: 'Fira Sans',sans-serif;
         font-size: 1.1rem;
     `;

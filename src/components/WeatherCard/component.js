@@ -20,6 +20,7 @@ const WeatherCard = ({temp,condition,city,country}) => {
     }
     
     const Card = styled.div`
+        
         background:${bg};
         width: 200px;
         height: 240px;
